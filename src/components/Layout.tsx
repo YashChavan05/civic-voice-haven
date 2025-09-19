@@ -3,6 +3,11 @@ import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Sidebar from './Sidebar';
 import Dashboard from './Dashboard';
+import ReportsManagement from './ReportsManagement';
+import HeatMap from './HeatMap';
+import Leaderboard from './Leaderboard';
+import AdminManagement from './AdminManagement';
+import Settings from './Settings';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
 
@@ -17,40 +22,15 @@ const Layout = () => {
       case '/dashboard':
         return <Dashboard />;
       case '/reports':
-        return (
-          <div className="text-center py-20">
-            <h1 className="text-4xl font-bold text-gradient-gold mb-4">Reports Management</h1>
-            <p className="text-muted-foreground">Coming soon - Advanced report filtering and management</p>
-          </div>
-        );
+        return <ReportsManagement />;
       case '/heatmap':
-        return (
-          <div className="text-center py-20">
-            <h1 className="text-4xl font-bold text-gradient-gold mb-4">Interactive Heat Map</h1>
-            <p className="text-muted-foreground">Coming soon - Geographic visualization of civic issues</p>
-          </div>
-        );
+        return <HeatMap />;
       case '/leaderboard':
-        return (
-          <div className="text-center py-20">
-            <h1 className="text-4xl font-bold text-gradient-gold mb-4">Citizen Leaderboard</h1>
-            <p className="text-muted-foreground">Coming soon - Top contributing citizens</p>
-          </div>
-        );
+        return <Leaderboard />;
       case '/admin-management':
-        return (
-          <div className="text-center py-20">
-            <h1 className="text-4xl font-bold text-gradient-gold mb-4">Admin Management</h1>
-            <p className="text-muted-foreground">Coming soon - Manage admin accounts and permissions</p>
-          </div>
-        );
+        return <AdminManagement />;
       case '/settings':
-        return (
-          <div className="text-center py-20">
-            <h1 className="text-4xl font-bold text-gradient-gold mb-4">Settings</h1>
-            <p className="text-muted-foreground">Coming soon - System configuration</p>
-          </div>
-        );
+        return <Settings />;
       default:
         return <Dashboard />;
     }
